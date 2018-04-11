@@ -1,0 +1,26 @@
+<ion-view view-title="sales request">
+  <ion-content class="bg-blue padding">
+
+<div class="row logo-clinic">
+  <div class="col col-40">
+    <img src="./img/heart.png" alt="">
+  </div>
+  <div class="col col-60">
+    <p>Dar-Alshifa<br>Clinic</p>
+  </div>
+</div>
+
+
+  <div class="textarea-container">
+      <textarea name="name" rows="8" cols="40" ng-model="textareaVal" ng-class="{isPlaceholder:!textareaVal}"></textarea>
+      <span class="textarea-placeholder" onclick="textareaPlaceholderClick(this)">
+        Enter your request description
+      </span>
+  </div>
+
+    <div class="row">
+      <button class="button button-block btn-lg">send complain</button>
+    </div>
+
+  </ion-content>
+</ion-view>

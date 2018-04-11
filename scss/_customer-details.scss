@@ -1,0 +1,179 @@
+ul {
+    &.table {
+        background: #fff;
+        border: 1px solid #ececec;
+        box-sizing: border-box;
+        float: left;
+        width: 100%;
+        margin-bottom: 15px;
+        li {
+            text-align: center;
+            color: #989898;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 400;
+            width: 100%;
+            height: auto;
+            float: left;
+            border-bottom: 1px solid #ececec;
+            &:nth-last-child(1) {
+                border-bottom: none;
+                padding: 10px 0px;
+            }
+            b {
+                color: #52acd3;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+            span {
+                padding: 10px 0px 10px 5px;
+                &.left {
+                    float: left;
+                    // width: 50%;
+                    color: #989898;
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-align: left;
+                }
+                &.right a {
+                    float: right;
+                    text-align: center;
+                    width: 44%;
+                    color: #52acd3;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    border-left: 1px solid #ececec;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.customer-details-map-wrap {
+    padding: 0;
+    padding-top: 10px;
+    .customer-details-map {
+        width: 100%;
+        height: 110px;
+        background: #ececec;
+        .gmnoprint {
+            display: none;
+        }
+    }
+}
+
+.customer-details-blocked {
+    background-color: #d50000;
+    h2 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &+ion-content {
+        .logo-clinic {
+            margin-top: 50px;
+        }
+    }
+}
+
+.bar-subheader .title {
+    height: auto;
+    line-height: 36px;
+}
+
+.bar-subheader {
+    top: 44px;
+    height: 36px;
+}
+
+.bar .title {
+    font-size: 12px;
+}
+
+.logo-clinic img {
+    max-height: 55px;
+    float: right;
+    position: relative;
+    top: 5px;
+}
+
+.customer-details-blocked+ion-content .logo-clinic {
+    margin-top: 38px;
+    margin-bottom: -5px;
+}
+
+ul.table li span {
+    padding: 0;
+    line-height: 28px;
+    padding-left: 10px;
+}
+
+ul.table li span.right {
+    font-size: 12px;
+}
+
+ul.table li b {
+    font-size: 11px;
+}
+
+p.Atitle,
+p.Atext {
+    margin-bottom: 0;
+}
+
+p.Atitle {
+    color: $blue-1;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+p.Atext {
+    line-height: 12px;
+    font-size: 10px;
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+#customer-details {
+    .btn-3 {
+        font-size: 10px;
+        line-height: 24px;
+        width: 100%;
+        background-color: #145977;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        border-radius: 2px;
+        text-transform: uppercase;
+    }
+    .button.button-block {
+        min-height: 10px;
+    }
+    .btn-3:before {
+        font-size: 12px;
+        line-height: 24px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .customer-details-map-wrap {
+        padding: 15px 0;
+        padding-top: 0;
+    }
+    .col-offset-17 {
+        margin-left: 17%;
+    }
+    .button.btn-lg {
+        margin-top: 15px;
+    }
+    .correct-margin {
+        margin-top: 6px;
+    }
+}

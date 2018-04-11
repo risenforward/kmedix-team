@@ -1,0 +1,76 @@
+<ion-view view-title="Device service log" id="device-service-log" hide-back-button="false">
+
+
+
+
+    <ion-nav-buttons side="right">
+        <button ng-click="reportCreate(logData.id)" class="button button-icon icon ion-plus"></button>
+    </ion-nav-buttons>
+
+
+
+
+    <ion-content class="bg padding">
+        <div class="card">
+            <div class="item item-divider card-title">
+                <span class="left">{{logData.model}}</span>
+                <span class="right">{{logData.serial_number}}</span>
+            </div>
+            <ul class="items">
+                <li class="item" ng-repeat="item in logData.service_logs" ng-class="{active: toggle}">
+                    <ul>
+                        <li class="item_header svg-still_need_support_icon" ng-click="toggle=!toggle">
+                            <span class="date">
+							{{item.service_date}}
+						</span>
+                            <span class="title">
+							{{item.engineer.full_name}}
+						</span>
+                        </li>
+                        <li class="item_content">
+                            <div class="item_content--block">
+                                <p class="item_content--block_title">
+                                    <b>Spare Part</b><br>{{item.part_desc}}
+                                </p>
+                            </div>
+                            <div class="item_content--block">
+                                <p class="item_content--block_title">
+                                    <b>Quantity</b><br>{{item.quantity}}
+                                </p>
+                            </div>
+                            <div class="item_content--block">
+                                <p class="item_content--block_title">
+                                    <b>Install Date</b><br>{{item.install_date}}
+                                </p>
+                            </div>
+                            <div class="item_content--block">
+                                <p class="item_content--block_title">
+                                    <b>Repair Date</b><br>{{item.service_date}}
+                                </p>
+                            </div>
+                            <div class="item_content--block">
+                                <p class="item_content--block_title">
+                                    <b>Counters</b>
+                                </p>
+                                <ul class="left">
+                                    <li ng-repeat="(key, val) in item.counters">{{key}}</li>
+                                </ul>
+                                <ul class="right">
+                                    <li ng-repeat="(key, val) in item.counters">{{val}}</li>
+                                </ul>
+                            </div>
+                            <div class="item_content--block">
+                                <p class="item_content--block_title">
+                                    <b>Description</b><br>{{item.description}}
+                                </p>
+                            </div>
+                            <div class="item_content--block text-center" ng-if="item.hasPdf == 'Y'">
+                                <a href ng-click="view_pdf('http://46.101.87.109/uploads/reports/{{item.id}}.pdf')" style="color: white;">View Full PDF</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

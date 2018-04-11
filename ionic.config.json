@@ -1,0 +1,15 @@
+{
+  "name": "kmedixteam",
+  "app_id": "296c94eb",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ],
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  }
+}

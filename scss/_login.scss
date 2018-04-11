@@ -1,0 +1,64 @@
+#login input {
+    text-transform: lowercase;
+}
+
+
+.row--logo {
+    margin: 70px 0px;
+    .kmedix-logo-img {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        font-size: 57px;
+    }
+}
+
+a {
+    &.lost-password {
+        text-align: left;
+        color: $color_main;
+        font-family: Raleway;
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: none;
+    }
+}
+
+.lost-password-popup {
+    background-color: #fff;
+    color: #145977;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 15px;
+    margin-top: 70%;
+    padding: 20px 0;
+    border-radius: 5px;
+    p:last-child {
+        font-size: 18px;
+        color: $blue-9;
+        margin-bottom: 0;
+    }
+}
+
+.wrapper-lost-password-popup {
+    .popup {
+        height: 100%;
+    }
+    .popup .popup-buttons {
+        display: block;
+        button {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            margin: 0;
+            left: 0;
+            background-color: transparent;
+            border: none;
+        }
+    }
+    .popup-head {
+        padding: 0;
+        border-bottom: none;
+    }
+}

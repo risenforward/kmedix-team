@@ -1,0 +1,240 @@
+#request-details {
+    .card-title {
+        background-color: $blue-5;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+    }
+    .text {
+        color: $blue-7;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .title {
+        color: $blue-1;
+        font-size: 13px;
+    }
+    .text-2 {
+        color: $blue-7;
+        font-size: 13px;
+    }
+    .text-3 {
+        color: $blue-7;
+        font-size: 11px;
+    }
+    .text-4 {
+        color: $blue-7;
+        font-size: 12px;
+    }
+    .title-header {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $blue-7;
+        text-align: center;
+        display: inherit;
+    }
+    .img-header {
+        font-size: 50px;
+        text-align: center;
+        display: inherit;
+        padding-top: 15px;
+        color: $blue-3;
+    }
+    .text-header {
+        font-size: 13px;
+        color: #52ACD3;
+        display: inherit;
+        text-align: center;
+        padding-top: 5px;
+        margin-bottom: 0;
+    }
+    .card {
+        margin-top: 10px;
+    }
+    .item {
+        padding: 5px 10px;
+    }
+    .card-footer {
+        padding: 0;
+        background-color: #fff;
+    }
+    .titleclinic {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $blue-7;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    .blocked:after {
+        content: "blocked";
+        position: absolute;
+        font-size: 8px;
+        font-weight: normal;
+        // right: 10px;
+        top: -2px;
+        background-color: $red-3;
+        padding: 2px 4px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+    .btn-lg {
+        min-height: 28px;
+        line-height: 28px;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    .button.button-block {
+        min-height: 10px;
+    }
+    .btn-3 {
+        font-size: 10px;
+        line-height: 24px;
+        width: 100%;
+        background-color: $blue-7;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        border-radius: 2px;
+        text-transform: uppercase;
+    }
+    .btn-3:before {
+        font-size: 12px;
+        line-height: 24px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .pt0 {
+        padding-top: 0;
+    }
+    .card,
+    .list-inset {
+        margin: 10px 0;
+    }
+    .item-text-wrap.icon-right:before {
+        float: right;
+        padding-right: 0;
+        padding-left: .2em;
+        line-height: 42px;
+        color: #ccc;
+    }
+}
+
+// .popup-head {
+//     height: 120px !important;
+//     background: red !important;
+// }
+.popup {
+    border-radius: 4px !important;
+}
+
+.popup-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $blue-7 !important;
+    font-weight: bold;
+}
+
+.popup-body {
+    .logo-clinic {
+        margin: 0;
+        padding-top: 0;
+        p {
+            font-size: 20px;
+        }
+        img {
+            max-height: 54px;
+            float: right;
+            position: relative;
+            top: 6px;
+        }
+    }
+}
+
+.popup-head {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.popup-buttons {
+    min-height: 50px;
+    padding: 0;
+    .button {
+        margin-right: 0!important;
+    }
+    button:active {
+        color: #fff;
+    }
+    button:before {
+        font-family: 'icomoon' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        float: right;
+        padding-right: 0;
+        padding-left: .2em;
+        font-size: 12px;
+        line-height: 24px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    button:first-child {
+        border-radius: 0 !important;
+        border-bottom-left-radius: 4px !important;
+        border-right: 1px solid $blue-8;
+        &:before {
+            content: "\e923";
+        }
+    }
+    button:last-child {
+        border-radius: 0 !important;
+        border-bottom-right-radius: 4px !important;
+        // border-left: 1px solid $blue-8;
+        &:before {
+            content: "\e927";
+        }
+    }
+    .button.activated {
+        border-color: $blue-7;
+        background-color: $blue-7;
+        color: #fff;
+    }
+}
+
+.ion-datetime-picker-popup {
+    .button.activated {
+        border-color: transparent;
+        background-color: $blue-1;
+        color: #fff;
+    }
+    .button.activated:last-child {
+        border-color: transparent;
+        background-color: #f8f8f8;
+        color: #444;
+    }
+}
+
+.popup-btn {
+    background-color: $blue-7;
+    color: #fff;
+}
+
+// -------------------
+#request-details {
+    .svg-assigned_red {
+        color: $red-4;
+    }
+    .svg-completed-icon {
+        color: $green-1;
+    }
+    .svg-pending {
+        color: $yellow-1;
+    }
+}

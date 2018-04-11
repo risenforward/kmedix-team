@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('icons/icomoon.eot?66ltay');
+    src: url('icons/icomoon.eot?66ltay#iefix') format('embedded-opentype'), url('icons/icomoon.ttf?66ltay') format('truetype'), url('icons/icomoon.woff?66ltay') format('woff'), url('icons/icomoon.svg?66ltay#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="svg-"]:before,
+[class*=" svg-"]:before {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.svg-kmedix-logo:before {
+    content: "\e932";
+}
+
+.svg-Close_Menu:before {
+    content: "\e900";
+}
+
+.svg-Home:before {
+    content: "\e901";
+}
+
+.svg-Logout:before {
+    content: "\e902";
+}
+
+.svg-Machine:before {
+    content: "\e903";
+}
+
+.svg-Service:before {
+    content: "\e904";
+}
+
+.svg-Setting:before {
+    content: "\e905";
+}
+
+.svg-Calendar:before {
+    content: "\e906";
+}
+
+.svg-check:before {
+    content: "\e907";
+}
+
+.svg-icon_back8:before {
+    content: "\e908";
+}
+
+.svg-select_icon_active:before {
+    content: "\e909";
+}
+
+.svg-select_icon_inactive:before {
+    content: "\e90a";
+}
+
+.svg-shortlist_active:before {
+    content: "\e90b";
+}
+
+.svg-Shortlist_inactive:before {
+    content: "\e90c";
+}
+
+.svg-icon_back:before {
+    content: "\e90e";
+}
+
+.svg-icon_back2:before {
+    content: "\e90f";
+}
+
+.svg-icon_device_active:before {
+    content: "\e910";
+}
+
+.svg-icon_device_inactive:before {
+    content: "\e911";
+}
+
+.svg-Calendar_active:before {
+    content: "\e912";
+}
+
+.svg-Calendar_inactive:before {
+    content: "\e913";
+}
+
+.svg-icon_back3:before {
+    content: "\e914";
+}
+
+.svg-Quantity_control_down:before {
+    content: "\e915";
+}
+
+.svg-Quantity_control_up:before {
+    content: "\e916";
+}
+
+.svg-icon_back4:before {
+    content: "\e917";
+}
+
+.svg-map-location:before {
+    content: "\e918";
+}
+
+.svg-icon_back5:before {
+    content: "\e919";
+}
+
+.svg-icon_back6:before {
+    content: "\e91a";
+}
+
+.svg-result-list-icon:before {
+    content: "\e91b";
+}
+
+.svg-search:before {
+    content: "\e91c";
+}
+
+.svg-shortlist-down .path1:before {
+    content: "\e91d";
+    color: rgb(255, 255, 255);
+}
+
+.svg-shortlist-down .path2:before {
+    content: "\e91e";
+    margin-left: -0.6728515625em;
+    color: rgb(52, 130, 164);
+}
+
+.svg-shortlist-up .path1:before {
+    content: "\e91f";
+    color: rgb(52, 130, 164);
+}
+
+.svg-shortlist-up .path2:before {
+    content: "\e920";
+    margin-left: -0.6728515625em;
+    color: rgb(255, 255, 255);
+}
+
+.svg-assigned_red:before {
+    content: "\e921";
+}
+
+.svg-assigned-icon:before {
+    content: "\e90d";
+}
+
+.svg-attend:before {
+    content: "\e922";
+}
+
+.svg-call-clinic:before {
+    content: "\e923";
+}
+
+.svg-completed-icon:before {
+    content: "\e924";
+}
+
+.svg-done:before {
+    content: "\e925";
+}
+
+.svg-icon_back7:before {
+    content: "\e926";
+}
+
+.svg-open-clinic:before {
+    content: "\e927";
+}
+
+.svg-open-pop-up:before {
+    content: "\e928";
+}
+
+.svg-pending:before {
+    content: "\e929";
+}
+
+.svg-reschedule-active:before {
+    content: "\e92a";
+}
+
+.svg-reschedule-disabled:before {
+    content: "\e92b";
+}
+
+.svg-start-nav:before {
+    content: "\e92c";
+}
+
+.svg-unassigned:before {
+    content: "\e92d";
+}
+
+.svg-al-hayat-icon:before {
+    content: "\e92e";
+}
+
+.svg-context-menu-open:before {
+    content: "\e92f";
+}
+
+.svg-dar-alshifa:before {
+    content: "\e930";
+}
+
+.svg-dental:before {
+    content: "\e931";
+}

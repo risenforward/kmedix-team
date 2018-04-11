@@ -1,0 +1,105 @@
+#devices {
+    .w33 {
+        width: 33%;
+        .item>p {
+            padding-left: 7px;
+        }
+    }
+    $placeholder: #79BFDD;
+    .item.item-input {
+        margin-bottom: 15px;
+        background-color: #1D92C5;
+        padding: 0;
+        padding-left: 10px;
+        input {
+            color: #fff;
+        }
+        border: 8px solid $blue-1;
+        border-radius: 0;
+         ::-webkit-input-placeholder {
+            color: $placeholder;
+        }
+         ::-moz-placeholder {
+            color: $placeholder;
+        }
+        /* Firefox 19+ */
+         :-moz-placeholder {
+            color: $placeholder;
+        }
+        /* Firefox 18- */
+         :-ms-input-placeholder {
+            color: $placeholder;
+        }
+    }
+    .card,
+    .list-inset {
+        background-color: $bg;
+        border-radius: 0;
+    }
+    .list .list-inset {
+        background-color: $bg;
+    }
+    .ion-search:before {
+        color: #fff;
+    }
+    .text1 {
+        color: $blue-1;
+        margin-bottom: 1px;
+        font-size: 12px;
+    }
+    // table
+    .ttu {
+        text-transform: uppercase;
+    }
+    .pb7 {
+        padding-bottom: 7px;
+        // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    .th {
+        .bl0 {
+            border-left: 0;
+        }
+        .br0 {
+            border-right: 0;
+        }
+        .col>.item {
+            padding: 5px 10px;
+            border-radius: 0;
+            border: .1px solid $bg;
+            border-bottom: 0;
+            border-top: 0;
+            p {
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+            }
+            background-color: $blue-7;
+        }
+    }
+    .card .item:last-child,
+    .list-inset .item:last-child {
+        margin: -1px;
+        margin-bottom: -2px;
+    }
+    .table {
+        .col>.item {
+            padding: 5px 0;
+            border-radius: 0;
+            border: .1px solid #E1E1E1;
+            p {
+                color: $blue-7;
+                font-size: 8px;
+                text-align: center;
+                font-weight: bold;
+            }
+            // background-color: $blue-7;
+        }
+    }
+    .even {
+        .col {
+            .item {
+                background-color: #ECECEC;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+<ion-view view-title="clinical support" id="clinical-support">
+    <ion-content class="bg padding">
+
+
+        <div class="card">
+            <div class="item item-divider card-title">
+                DEV45600 duetto device
+            </div>
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col m-10">
+                                <p class="title">Install date</p>
+                                <p class="text-4 fwb">12/04/2015</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col m-10 mt30">
+                                <p class="title">Warranty ends at</p>
+                                <p class="text-4 fwb">12/04/2017</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="img/clinic.png" alt="" class="w100p">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="textarea-container">
+            <textarea name="name" rows="8" cols="20" ng-model="textareaVal" ng-class="{isPlaceholder:!textareaVal}"></textarea>
+            <span class="textarea-placeholder" onclick="textareaPlaceholderClick(this)">
+        Enter your request description
+      </span>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col pl0 pr0">
+                <span class="text-2 title fz-2">3 images attached</span>
+            </div>
+            <div class="col pl0 pr0">
+                <button class="button t-btn t-btn-l icon-right svg-gallery_icon2">
+		  Gallery
+		</button>
+            </div>
+            <div class="col pl0 pr0">
+                <button class="button t-btn t-btn-r icon-right svg-camera_icon2">
+		  Camera
+		</button>
+            </div>
+        </div>
+
+
+        <button class="button button-block btn-lg">send request</button>
+    </ion-content>
+</ion-view>

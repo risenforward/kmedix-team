@@ -1,0 +1,118 @@
+#technical-support{
+	.image-wrapper{
+		text-align: center;
+		img{
+			width: 160px;
+			position: relative;
+			left: 10px;
+		}
+	}
+	textarea{
+		width: 100%;
+		min-height: 70px;
+		padding: 15px;
+		padding-top: 10px;
+	}
+
+	.placeholder-textarea{
+		color: $blue-7; 
+		font-size: 12px;
+	}
+
+	  textarea::-moz-placeholder {
+		color: $blue-7; 
+		font-size: 11px;
+		font-weight: bold;
+	}
+	  textarea:-ms-input-placeholder {
+		color: $blue-7; 
+		font-size: 11px;
+		font-weight: bold;
+	}
+	  textarea::-webkit-input-placeholder {
+		color: $blue-7; 
+		font-size: 11px;
+		font-weight: bold;
+	    text-indent: -3px; 
+	}
+
+	.text-2{
+		font-size: 11px;
+		color: $blue-7;
+		text-align: center;
+	}
+	.text-2.title{
+		color: $blue-1;
+	}
+
+	.card-title{
+		color: $blue-7; 
+		font-size: 14px;
+		text-align: center;
+		font-weight: bold;
+		background-color: #fff;
+	}
+	.item-text-wrap{
+		padding: 0;
+	}
+
+	.item{
+		border-color: #ebebeb;
+	}
+
+	.rm-shaadow{
+		box-shadow: none;
+		border: 1px solid #DDD;
+	}
+
+	.card{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		@extend .rm-shaadow;
+	}
+
+	.fz-2{
+		font-size: 11px;
+	}
+	
+	.t-btn{
+		text-transform: uppercase;
+		margin: 0;
+
+		width: 100%;
+		background-color: $blue-7;
+		color: #fff;
+		border-radius: 0;
+    font-family: 'Raleway';
+	border: none;
+	color: white;
+	transition: all .3s ease;
+	font-size: 10px;
+	line-height: 24px;
+	min-height: 26px;
+	border-radius: 1px;
+
+	}
+
+	$t-btn-w: 5px;
+	.t-btn-l{
+		margin-right: $t-btn-w;
+	}
+	.t-btn-r{
+		margin-left: $t-btn-w;
+	}
+
+	.t-btn-svg{
+		font-size: 10px;
+		line-height: 22px;
+		padding-left: 3px;
+	}
+
+	.t-btn.svg-gallery_icon2:before{
+		@extend .t-btn-svg;
+	}
+	.t-btn.svg-camera_icon2:before{
+		@extend .t-btn-svg;
+	}
+}
+

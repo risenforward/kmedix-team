@@ -1,0 +1,31 @@
+<ion-view view-title="login" cache-view="false" hide-back-button="true" ng-init="hideBell(); showMenuButton(false)" id="login">
+    <ion-content class="bg-blue padding">
+        <div class="row row--logo">
+            <div class="col">
+                <i class="svg-kmedix-logo kmedix-logo-img"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-offset-10 col-80">
+                <input type="text" placeholder="Your email" class="sl_input sl_input--username" ng-model="auth.email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-offset-10 col-80">
+                <input type="password" placeholder="Password" class="sl_input sl_input--password" ng-model="auth.password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-offset-10 col-80">
+                <button class="button button-block sl_btn--md icon-right svg-still_need_support_icon" ng-click="login(auth)">
+			LOGIN
+			</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-80 col-offset-10">
+                <a href="#" class="lost-password" ng-click="lostPassword()"> Lost password? </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,91 @@
+
+$height: 60px;
+
+
+.button.home-menu-item, 
+.button.home-menu-item__2, 
+.button.home-menu-item__3, 
+.button.home-menu-item__4{
+    background-color: $blue-1;
+    border-radius: 0;
+    color: #fff;
+    text-transform: uppercase;
+    border-width: 0;
+    min-height: $height;
+    line-height: $height;
+    margin: -1px;
+    font-size: 14px;
+    font-family: Raleway;
+}
+
+.home-menu-item:after, 
+.home-menu-item__2:after, 
+.home-menu-item__3:after, 
+.home-menu-item__4:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    content: ' ';
+    height: 100%;
+    width: $height;
+    background-color: $blue-2;
+    z-index: 1;
+}
+
+.button.home-menu-item:before, 
+.button.home-menu-item__2:before, 
+.button.home-menu-item__3:before, 
+.button.home-menu-item__4:before{
+    position: relative;
+    z-index: 2;
+    line-height: $height;
+    letter-spacing: 8px;
+    font-size: 20px;
+}
+.home-menu-item.active, 
+.home-menu-item.activated{
+    background-color: $blue-2;
+}
+
+
+
+
+.button.home-menu-item__2{
+    background-color: $blue-3;
+}
+.home-menu-item__2:after {
+    background-color: $blue-4;
+}
+.home-menu-item__2.active, 
+.home-menu-item__2.activated{
+    background-color: $blue-4;
+}
+
+
+
+
+.button.home-menu-item__3{
+    background-color: $blue-5;
+}
+.home-menu-item__3:after {
+    background-color: $blue-6;
+}
+.home-menu-item__3.active, 
+.home-menu-item__3.activated{
+    background-color: $blue-6;
+}
+
+
+
+.button.home-menu-item__4{
+    background-color: $blue-7;
+}
+.home-menu-item__4:after {
+    background-color: $blue-8;
+}
+.home-menu-item__4.active, 
+.home-menu-item__4.activated{
+    background-color: $blue-8;
+}

@@ -1,0 +1,71 @@
+<ion-view view-title="Device details" id="device-details" hide-back-button="false">
+    <ion-content class="bg padding">
+        <div class="row">
+            <div class="col image-wrapper">
+                <img ng-src="{{deviceDetailsData.image_url}}" alt="">
+            </div>
+        </div>
+
+
+        <div class="card mt5">
+            <div class="item item-divider card-title">
+                {{deviceDetailsData.model}}
+            </div>
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col">
+                        <p class="text text-7">Customer</p>
+                        <p class="text text-8 fwb fz14 customer-details-blocked"  ng-if="deviceDetailsData.blocked" ng-click="customerDetails(deviceDetailsData.clinicId)">{{deviceDetailsData.clinic_name}}</p>
+                        <p class="text text-8 fwb fz14"  ng-if="!deviceDetailsData.blocked" ng-click="customerDetails(deviceDetailsData.clinicId)">{{deviceDetailsData.clinic_name}}</p>
+                      <!--  <p ng-class="{blocked: deviceDetailsData.blocked, text: true, titleclinic: true}">{{deviceDetailsData.clinic_name}}</p> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="text text-7">Serial No</p>
+                        <p class="text text-8 fwb">{{deviceDetailsData.serial_number}}</p>
+                    </div>
+                    <div class="col">
+                        <p class="text text-7">Supplier/Manufacture</p>
+                        <p class="text text-8 fwb">{{deviceDetailsData.supplier}}</p>
+                    </div>
+                </div>
+                <div class="row" ng-if="!deviceDetailsData.hasContract">
+                    <div class="col">
+                        <p class="text text-7">Install date</p>
+                        <p class="text text-8 fwb">{{deviceDetailsData.install_date}}</p>
+                    </div>
+                    <div class="col">
+                        <p class="text text-7">Warranty ends at</p>
+                        <p class="text text-8 fwb customer-details-blocked"  ng-if="deviceDetailsData.warranty_end">{{deviceDetailsData.warranty_end_at}}</p>
+                        <p class="text text-8 fwb"  ng-if="!deviceDetailsData.warranty_end">{{deviceDetailsData.warranty_end_at}}</p>
+                    </div>
+                     <div class="col">
+                        <p class="text text-7">Consumable Warranty ends at</p>
+                        <p class="text text-8 fwb customer-details-blocked"  ng-if="deviceDetailsData.consumable_warranty_end">{{deviceDetailsData.consumable_warranty_end_at}}</p>
+                        <p class="text text-8 fwb"  ng-if="!deviceDetailsData.consumable_warranty_end">{{deviceDetailsData.consumable_warranty_end_at}}</p>
+                    </div>
+                </div>
+                <div class="row" ng-if="deviceDetailsData.hasContract">
+                        <div class="col">
+                            <p class="text text-7">Install date</p>
+                            <p class="text text-8 fwb">{{deviceDetailsData.install_date}}</p>
+                        </div>
+                        <div class="col">
+                            <p class="text text-7">Contract Level</p>
+                            <p class="text text-8 fwb"  >{{deviceDetailsData.contract_level}}</p>
+                        </div>
+                         <div class="col">
+                            <p class="text text-7">Contract ends at</p>
+                            <p class="text text-8 fwb customer-details-blocked"  ng-if="deviceDetailsData.contract_end">{{deviceDetailsData.extended_warranty_end_at}}</p>
+                            <p class="text text-8 fwb"  ng-if="!deviceDetailsData.contract_end">{{deviceDetailsData.extended_warranty_end_at}}</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="button button-block btn-lg" ng-click="reportCreate(deviceDetailsData.id)">add service report</button>
+        <button class="button button-block btn-lg" ng-click="log(deviceDetailsData.id)">show service log</button>
+    </ion-content>
+</ion-view>

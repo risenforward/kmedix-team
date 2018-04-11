@@ -1,0 +1,96 @@
+<ion-view view-title="Request detail" id="request-details" hide-back-button="false">
+    <ion-content class="bg padding">
+        <div class="row pb0">
+            <div class="col pb0">
+                <span class="title-header fwb">Pending</span>
+                <i class="img-header svg-pending"></i>
+                <p class="text-header">Waiting for spareparts</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider card-title">
+                {{responseArr.serial}} {{responseArr.model}}
+            </div>
+            <div class="item item-text-wrap  pt0">
+                <div class="row">
+                  <div class="col-67" ng-if="!responseArr.hasContract">
+                      <div class="row">
+                          <div class="col m-10">
+                              <p class="title">Install date</p>
+                              <p class="text-4 fwb">{{responseArr.date}}</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col m-10 mt15">
+                              <p class="title">Warranty ends at</p>
+                              <p class="text-4 fwb warranty-date-blocked"  ng-if="responseArr.warranty_end">{{responseArr.warranty}}</p>
+                              <p class="text-4 fwb"  ng-if="!responseArr.warranty_end">{{responseArr.warranty}}</p>
+                          </div>
+                      </div>
+                      <div class="row" ng-if="consumableWarrantyShow">
+                          <div class="col m-10 mt15">
+                              <p class="title">Consumable Warranty</p>
+                              <p class="text-4 fwb warranty-date-blocked"  ng-if="responseArr.consumable_warranty_end">{{responseArr.consumableWarranty}}</p>
+                              <p class="text-4 fwb"  ng-if="!responseArr.consumable_warranty_end">{{responseArr.consumableWarranty}}</p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-67" ng-if="responseArr.hasContract">
+                        <div class="row">
+                            <div class="col m-10">
+                                <p class="title">Install date</p>
+                                <p class="text-4 fwb">{{responseArr.date}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col m-10 mt15">
+                                <p class="title">Contract Level</p>
+                                <p class="text-4 fwb" >{{responseArr.contract_level}}</p>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col m-10 mt15">
+                                <p class="title">Contract ends at</p>
+                                <p class="text-4 fwb warranty-date-blocked"  ng-if="responseArr.contract_end">{{responseArr.extended_warranty_end_at}}</p>
+                                <p class="text-4 fwb"  ng-if="!responseArr.contract_end">{{responseArr.extended_warranty_end_at}}</p>
+                            </div>
+                        </div>
+                      </div>
+                    <div class="col-33">
+                        <img ng-src="{{responseArr.img}}" alt="" class="rd">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="item item-text-wrap pt0" ng-click="popupImages()">
+                <p class="title">Description</p>
+                <p class="text">{{responseArr.description}}</p>
+            </div>
+            <div class="item item-text-wrap icon-right svg-icon_device_inactive" ng-click="popup()">
+                <p class="title">Clinic</p>
+                <p ng-class="{blocked: responseArr.blocked, text: true, titleclinic: true}">{{responseArr.clinicname}}</p>
+            </div>
+
+        </div>
+
+        <div class="row p0">
+            <div class="col pl0">
+                <button class="button button-block icon-right svg-start-nav btn-3" ng-disabled="!showCustomerStartNav" ng-click="navigate()">start nav</button>
+            </div>
+            <div class="col pb0">
+                <button class="button button-block icon-right svg-reschedule-active btn-3" ng-click="reschedule(responseArr.id)">reschedule</button>
+            </div>
+            <div class="col pr0">
+                <button class="button button-block icon-right svg-done btn-3" ng-disabled="disabledDone" ng-click="requestDone(responseArr.id)">done</button>
+            </div>
+        </div>
+
+
+        <button class="button button-block btn-lg" ng-click="log(responseArr.idDevice)" ng-if="$storage.showitem">show service log</button>
+        <!--<button class="button button-block btn-lg" ng-if="$storage.showitem">request spare part</button>-->
+
+
+    </ion-content>
+</ion-view>

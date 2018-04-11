@@ -1,0 +1,75 @@
+.logo-clinic{
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	img{
+		max-height: 64px;
+		float: right;
+	}
+	p{
+		font-size: 24px;
+		color: #52ACD3;
+		font-weight: bold;
+		line-height: 33px;
+		float: left;
+		text-transform: uppercase;
+	}
+
+
+	.col-60 {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 63%;
+		-moz-box-flex: 0;
+		-moz-flex: 0 0 63%;
+		-ms-flex: 0 0 63%;
+		flex: 0 0 63%;
+		max-width: 63%;
+	}
+
+	.col-40 {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 37%;
+		-moz-box-flex: 0;
+		-moz-flex: 0 0 37%;
+		-ms-flex: 0 0 37%;
+		flex: 0 0 37%;
+		max-width: 37%;
+	}
+
+}
+
+.clinic_logo {
+	margin: 100px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.clinic_logo--img {
+		margin: 0px 25px;
+		width: 130px;
+		height: auto;
+	}
+
+	.clinic_logo--name {
+		text-align: left;
+		color: $color_main;
+		font-family: Montserrat;
+		font-size: 3em;
+		font-weight: 700;
+		line-height: 1em;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.clinic_logo {
+
+		.clinic_logo--img {
+			width: 85px;
+			margin: 0px 15px;
+		}
+
+		.clinic_logo--name {
+			font-size: 2.2em;
+		}
+	}
+}

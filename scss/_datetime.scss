@@ -1,0 +1,105 @@
+.ion-datetime-picker-popup {
+    .button.button-positive.button-clear {
+        color: $blue-1;
+    }
+    .popup-buttons {
+        button:before {
+            content: none
+        }
+        .button.button-positive {
+            border-color: transparent;
+            background-color: $blue-1;
+            color: #fff;
+        }
+    }
+    .ion-datetime-picker .calendar .day.selected,
+    .ion-datetime-picker .calendar .day.selected:hover,
+    .ion-datetime-picker .calendar .day.selected.activated {
+        background-color: $blue-7;
+        color: #fff;
+    }
+}
+
+//--------------------------------------------------------------
+.preventiveMaintenancePopup .month-year {
+    padding: 0;
+    text-align: center
+}
+
+.preventiveMaintenancePopup .month-year select {
+    width: 100%
+}
+
+.preventiveMaintenancePopup .month-year .button {
+    padding: 0;
+    width: 100%;
+    height: 25px;
+    min-width: 0;
+    min-height: 0
+}
+
+.preventiveMaintenancePopup .month-year .item-input {
+    height: 25px;
+    padding: 0;
+    margin: 0
+}
+
+.preventiveMaintenancePopup .month-year .item-input.item-select:after {
+    right: 5px
+}
+
+.preventiveMaintenancePopup .month-year .item-input input,
+.preventiveMaintenancePopup .month-year .item-input select {
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    line-height: 20px
+}
+
+.preventiveMaintenancePopup .month-year .item-input select {
+    left: 0;
+    padding: 0 15px 0 1px;
+    direction: ltr
+}
+
+.preventiveMaintenancePopup .month-year .item-input input {
+    text-align: center;
+    padding: 0 5px
+}
+
+.preventiveMaintenancePopup .month-year .item-input input.ng-invalid {
+    background-color: #ffe4ea
+}
+
+.preventiveMaintenancePopup .month-year .item-input input::-webkit-outer-spin-button,
+.preventiveMaintenancePopup .month-year .item-input input::-webkit-inner-spin-button {
+    display: none
+}
+
+.preventiveMaintenancePopup {
+    .button.button-default.button-clear {
+        color: $blue-1;
+    }
+    .popup-buttons {
+        button:before {
+            content: none
+        }
+        .button.button-default {
+            border-color: transparent;
+            background-color: $blue-1;
+            color: #fff;
+        }
+        .button.button-default:last-child {
+            border-color: transparent;
+            background-color: #f8f8f8;
+            color: #444;
+        }
+    }
+    .ion-datetime-picker .calendar .day.selected,
+    .ion-datetime-picker .calendar .day.selected:hover,
+    .ion-datetime-picker .calendar .day.selected.activated {
+        background-color: $blue-7;
+        color: #fff;
+    }
+}

@@ -1,0 +1,58 @@
+#request-details {
+    .card-title {
+        background-color: $blue-5;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+    }
+    .text {
+        color: $blue-7;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .title {
+        color: $blue-1;
+        font-size: 13px;
+    }
+    .text-2 {
+        color: $blue-7;
+        font-size: 13px;
+    }
+    .text-3 {
+        color: $blue-7;
+        font-size: 11px;
+    }
+    .title-header {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $blue-7;
+        text-align: center;
+        display: inherit;
+    }
+    .img-header {
+        font-size: 50px;
+        text-align: center;
+        display: inherit;
+        padding-top: 15px;
+        color: $green-1;
+    }
+    .text-header {
+        font-size: 13px;
+        color: #52ACD3;
+        display: inherit;
+        text-align: center;
+        padding-top: 5px;
+        margin-bottom: 0;
+    }
+    .card {
+        margin-top: 10px;
+    }
+    .item {
+        padding: 5px 10px;
+    }
+    .card-footer{
+        padding: 0;
+        background-color: #fff;
+    }
+
+}

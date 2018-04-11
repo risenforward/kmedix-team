@@ -1,0 +1,116 @@
+#kmedix-home {
+    .tab-content .scroll {
+        padding: 60px 10px 0 10px;
+    }
+    .tab-item {
+        background-color: $blue-10;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        color: #fff;
+        max-width: 100%;
+        span {
+            font-size: 14px;
+            line-height: 40px;
+        }
+    }
+    .tab-item.tab-item-active,
+    .tab-item.active,
+    .tab-item.activated {
+        box-shadow: none;
+        background-color: $bg;
+        color: $blue-1;
+        transition: all .2s;
+    }
+    .tabs-top>.tabs,
+    .tabs.tabs-top {
+        top: 0;
+    }
+    .scroll {
+        height: 100%;
+        background-color: $bg;
+    }
+    .notes {
+        color: #A6A6A6;
+        font-size: 12px;
+    }
+    .tabs {
+        height: 40px;
+    }
+    .pane,
+    .view {
+        background-color: $bg;
+    }
+    .bar.bar-footer {
+        background-image: none;
+        padding-left: 10px;
+        i {
+            font-size: 28px;
+            color: $blue-9;
+        }
+    }
+    .item-clinic-wrap {
+        background-color: $blue-1;
+        color: #fff;
+        padding: 0;
+        line-height: 40px;
+        padding-left: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 2px;
+        &:after {
+            content: " ";
+            position: absolute;
+            background-color: $blue-2;
+            width: 40px;
+            height: 100%;
+            right: 0;
+        }
+    }
+    .card,
+    .list-inset {
+        border-radius: 0;
+        margin: 20px 0;
+        box-shadow: none;
+        background-color: $bg;
+    }
+    .clinic-logo-img {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 8px;
+        top: 8px;
+        z-index: 10;
+    }
+    .item-clinic-wrap.active,
+    .item-clinic-wrap.activated {
+        border-color: $blue-2;
+        background-color: $blue-2;
+        color: #fff;
+        &:after {
+            background-color: $blue-3;
+        }
+    }
+    .tabs-positive>.tabs,
+    .tabs.tabs-positive {
+        border-color: transparent;
+        background-color: transparent;
+    }
+    .tabs-top.tabs-striped .tab-item.tab-item-active,
+    .tabs-top.tabs-striped .tab-item.active,
+    .tabs-top.tabs-striped .tab-item.activated {
+        margin-top: 0px;
+        border-width: 0px 0px 0px 0px !important;
+        border-style: solid;
+    }
+}
+
+.kmedix-logo-img {
+    font-size: 28px;
+    padding-left: 5px;
+    color: $blue-9;
+}
+
+.bar {
+    background-image: none;
+}

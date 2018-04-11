@@ -1,0 +1,46 @@
+
+input.sl_input {
+	padding: 0px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fff;
+	border: 1px solid $color_main;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding-left: 18px;
+	font-family: Raleway;
+	font-size: 16px;
+	font-weight: 300;
+	background-position: center right;
+	background-repeat: no-repeat;
+
+	&.sl_input--username {
+		background-image: url(../img/sl_input--username.png);
+	}
+
+	&.sl_input--username-disabled {
+		background-image: url(../img/sl_input--username-disabled.png);
+	}
+
+	&.sl_input--password {
+		background-image: url(../img/sl_input--password.png);
+	}
+
+	&.sl_input--view {
+		background-image: url(../img/sl_input--view.png);
+	}
+
+	&.sl_input--view-disabled {
+		background-image: url(../img/sl_input--view-disabled.png);
+	}
+
+	&.sl_input--disabled {
+		background-color: #f4f9fa;
+	}
+
+	&.sl_input--no-border {
+		border: none;
+		background-color: #dedede;
+	}
+}

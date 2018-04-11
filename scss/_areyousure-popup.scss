@@ -1,0 +1,74 @@
+.wrapper-areyousure-popup {
+    .popup {
+        .popup-buttons,
+        .popup-head {
+            display: none;
+        }
+    }
+    .popup-container .popup {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .popup-body {
+        padding: 0;
+    }
+    .popup-container {
+        padding-top: 35px;
+        align-items: flex-start;
+    }
+    .popup-container .popup {
+        background-color: transparent;
+    }
+    .popup {
+        margin: 0 15px 0 15px;
+    }
+    .areyousure-popup {
+        color: $blue-7;
+        background-color: #fff;
+        margin: 0;
+        border-radius: 4px;
+        text-align: center;
+        padding: 20px 0 50px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .popup .popup-buttons {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        button {
+            position: absolute;
+            bottom: 0;
+            background-color: $blue-1;
+            color: #fff;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border: 6px solid #fff;
+        }
+        button:before {
+            content: none;
+        }
+        button:first-child {
+            left: 0;
+            border-right: 3px solid #fff;
+        }
+        button:last-child {
+            right: 0;
+            border-left: 3px solid #fff;
+        }
+    }
+    .popup-buttons {
+        .button.activated {
+            border-color: #fff!important;
+            background-color: $blue-1!important;
+            color: #fff!important;
+        }
+    }
+}

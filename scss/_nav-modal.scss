@@ -1,0 +1,113 @@
+.bar.bar-header.bar-model {
+    height: 44px;
+    background-color: $blue-1;
+    .title.title-center {
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+    }
+}
+
+.bar.bar-header.bar-model h1.title.title-center {
+    right: 0!important;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    color: #fff;
+}
+
+.item.item-icon-left {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 16px;
+    padding-left: 54px;
+    i,
+    p {
+        color: #fff;
+    }
+    .title-notification {
+        text-transform: uppercase;
+    }
+    .text-notification {
+        font-size: 12px;
+    }
+}
+
+.modal-wrapper .modal {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.item.item-icon-left.warning {
+    background-color: $red-1;
+}
+
+.item.item-icon-left.pending {
+    background-color: $yellow-1;
+}
+
+.item.item-icon-left.completed {
+    background-color: $green-1;
+}
+
+
+.bar.bar-header.bar-model {
+    height: 44px;
+    background-color: $blue-1;
+    .title.title-center {
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+    }
+}
+
+.bar.bar-header.bar-model h1.title.title-center {
+    right: 0!important;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    color: #fff;
+}
+
+#nav-model {
+    h2 {
+        background-color: #247294;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+    }
+    input {
+        width: 100%;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        border-radius: 3px;
+    }
+}
+
+// .item.item-icon-left {
+//     margin-bottom: 10px;
+//     border: none;
+//     border-radius: 4px;
+//     padding: 12px 16px;
+//     padding-left: 54px;
+//     i,
+//     p {
+//         color: #fff;
+//     }
+//     .title-notification {
+//         text-transform: uppercase;
+//     }
+//     .text-notification {
+//         font-size: 12px;
+//     }
+// }
+.modal-wrapper .modal {
+    background-color: #F2FCFF;
+}

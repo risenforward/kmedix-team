@@ -1,0 +1,44 @@
+ion-side-menu.menu.menu-left {
+    background-color: $blue-3;
+    .item-content {
+        background-color: $blue-3;
+        color: #fff;
+        font-family: Raleway;
+        font-size: 14px;
+        padding-left: 42px;
+    }
+    [class^="svg-"]:before,
+    [class*=" svg-"]:before {
+        position: absolute;
+        left: 15px;
+        right: a;
+        z-index: 3;
+        color: #fff;
+        top: 18px;
+    }
+    .item {
+        border-color: $blue-4;
+    }
+    ion-header-bar {
+        border-color: transparent;
+        background-color: transparent;
+        background-image: none;
+    }
+    .svg-Home {
+        border-top: none;
+    }
+    ion-item.menu-title.item {
+        border-color: transparent;
+        background-color: transparent;
+        background-image: none;
+        text-align: center;
+        p {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        p:last-child {
+            font-weight: bold;
+        }
+    }
+}

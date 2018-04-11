@@ -1,0 +1,50 @@
+<ion-view view-title="Settings" id="settings" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="bg padding">
+
+
+        <div class="row pt150 mb15">
+            <div class="col-85 text">
+                Receive Notification on new support request
+            </div>
+            <div class="col-15">
+                <label class="toggle toggle-assertive">
+       <input type="checkbox" ng-model="ch" ng-change="toggleNotifications(ch)">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+            </div>
+        </div>
+
+        <!-- <ul class="list">
+
+  <li class="item item-toggle">
+     Receive Notification on new support request
+     <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+  ...
+
+</ul> -->
+
+
+
+
+
+        <div class="row">
+            <button class="button button-block btn-lg" ui-sref="app.change-password">change password</button>
+        </div>
+
+        <div class="row">
+            <button class="button button-block btn-lg" ng-click="signOut()">sign out</button>
+        </div>
+    </ion-content>
+</ion-view>

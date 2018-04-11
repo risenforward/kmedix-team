@@ -1,0 +1,30 @@
+#settings{
+
+    .text{
+        color: $blue-7;
+        font-size: 12px;
+    }
+
+    .toggle .handle {
+        width: 20px;
+        height: 20px;
+        border-radius: 27px;
+        background-color: $blue-1;
+        top: -4px;
+        left: -2px;
+    }
+
+    .toggle .track {
+        width: 40px;
+        height: 16px;
+        position: relative;
+        top: 4px;
+        right: -3px;
+    }
+
+    .toggle.toggle-assertive input:checked + .track {
+        border-color: $blue-2;
+        background-color: $blue-2;
+    }
+
+}

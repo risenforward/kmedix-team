@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="fonts/style.css" rel="stylesheet">
+
+    <script src="lib/bluebird.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic.cloud.min.js"></script>
+
+    <script src="cordova.js"></script>
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&amp;sensor=true"></script>
+    <script src="lib/jquery-2.1.4.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="lib/ion-datetime-picker/release/ion-datetime-picker.min.js"></script>
+    <link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="engineer">
+
+    <!--<div id="custom-overlay">
+        <img src="img/splashscreen.gif">
+    </div>-->
+
+
+    <ion-nav-view></ion-nav-view>
+    <script id="templates/open-popup.html" type="text/ng-template">
+        <div class="row logo-clinic">
+            <div class="col col-40">
+                <img ng-src="{{currCusomerLogo}}" alt="">
+            </div>
+            <div class="col col-60">
+                <p>{{currCusomerName}}</p>
+            </div>
+        </div>
+    </script>
+    <script id="templates/preventiveMaintenancePopup.html" type="text/ng-template">
+        <div class="row month-year">
+            <div class="col col-10 left-arrow">
+                <button type="button" class="button button-small button-positive button-clear icon ion-chevron-left" ng-click="minusMonth()">
+                </button>
+            </div>
+            <label class="col col-50 month-input">
+               <div class="item item-input item-select">
+                  <select ng-model="pmMonth" ng-change="change('month')"
+                     class="ng-pristine ng-valid ng-not-empty ng-touched">
+                     <option label="January" value="January" selected="selected">January</option>
+                     <option label="February" value="February" selected="selected">February</option>
+                     <option label="March" value="March" selected="selected">March</option>
+                     <option label="April" value="April" selected="selected">April</option>
+                     <option label="May" value="May" selected="selected">May</option>
+                     <option label="June" value="June" selected="selected">June</option>
+                     <option label="July" value="July" selected="selected">July</option>
+                     <option label="August" value="August" selected="selected">August</option>
+                     <option label="September" value="September" selected="selected">September</option>
+                     <option label="October" value="October" selected="selected">October</option>
+                     <option label="November" value="November" selected="selected">November</option>
+                     <option label="December" value="December" selected="selected">December</option>
+                  </select>
+               </div>
+            </label>
+            <label class="col year-input">
+               <div class="item item-input">
+                  <div>
+                      <input type="number" 
+                      ng-model="pmYear" 
+                      min="1900" max="2999" 
+                      required="" 
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-min ng-valid-max ng-valid-required">
+                  </div>
+               </div>
+        </label>
+            <div class="col col-10 right-arrow">
+                <button type="button" class="button button-small button-positive button-clear icon ion-chevron-right" ng-click="plusMonth()">
+                </button>
+            </div>
+        </div>
+    </script>
+    <script id="templates/modal-images.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-model">
+                <h1 class="title title-center">Attended images</h1>
+                <i class="close-modal ion-close" ng-click="modal.hide();"></i>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <ion-slide-box on-slide-changed="slideHasChanged($index)">
+                    <ion-slide ng-repeat="img in responseArr.images">
+                        <img ng-src="{{img.image_url}}" class="attendedImg" alt="">
+                    </ion-slide>
+                </ion-slide-box>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+
+</body>
+
+</html>

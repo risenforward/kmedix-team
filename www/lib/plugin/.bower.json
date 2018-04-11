@@ -1,0 +1,15 @@
+{
+  "name": "plugin",
+  "homepage": "https://github.com/mobify/plugin",
+  "version": "4.0.0",
+  "_release": "4.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "4.0.0",
+    "commit": "3e5f563afe3e3f98c1f916ef5110c5840566d655"
+  },
+  "_source": "https://github.com/mobify/plugin.git",
+  "_target": "^4.0.0",
+  "_originalSource": "plugin",
+  "_direct": true
+}

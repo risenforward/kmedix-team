@@ -1,0 +1,80 @@
+<ion-view view-title="Preventive maintenance" id="preventive-maintenance" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="bg padding">
+        <h1>Preventive Maintenance Task List of</h1>
+        <div class="row">
+            <div class="col-offset-67 col-33">
+                <p cclass="'ion-datetime-picker-popup preventiveMaintenance-datetime-picker'" class="calendar-p icon-left svg-Calendar" ion-datetime-picker date title="'Preventive Maintenance Date'" ng-init="preventiveMaintenanceDate = dateNow " ng-model="preventiveMaintenanceDate"
+                    ng-change="preventiveMaintenance(preventiveMaintenanceDate, currSelectTask)">
+                    {{preventiveMaintenanceDate | date: "MMM yyyy"}}</p>
+                <!--<p>{{preventiveMaintenanceDate}}</p>-->
+                <!--<p class="calendar-p icon-left svg-Calendar" ng-click="preventiveMaintenancePopup()">
+                    {{preventiveMaintenanceDate | date: "MMM yyyy"}}</p>-->
+
+            </div>
+        </div>
+
+        <div class="list list-inset select" ng-class="{opened: custom}">
+            <div class="item" ng-bind="currSelectTask" ng-click="toggleCustom()">11</div>
+        </div>
+
+        <div class="list list-inset options" id="derp">
+            <!-- ng-class="{'dn':currSelect=='All types', item: true}"  -->
+            <div class="item" ng-click="preventiveMaintenance(preventiveMaintenanceDate, 'All Tasks'); toggleCustom()" ng-hide="custom">Show All Tasks</div>
+            <div class="item" ng-click="preventiveMaintenance(preventiveMaintenanceDate, 'Pending Tasks'); toggleCustom()" ng-hide="custom">Show Pending Tasks</div>
+            <div class="item" ng-click="preventiveMaintenance(preventiveMaintenanceDate, 'Completed Tasks'); toggleCustom()" ng-hide="custom">Show Completed Tasks</div>
+
+
+
+            <!--<div class="item" ng-click="changeType(''); toggleCustom()" ng-hide="custom">All types</div>
+            <div class="item arrow-option" ng-repeat="type in types" ng-bind="type.type" ng-click="changeType(type.type); toggleCustom()" ng-hide="custom"></div>-->
+        </div>
+
+        <div class="row table-th p0 pb7">
+            <div class="col-10 p0">
+                <div class="item">
+
+                </div>
+            </div>
+            <div class="col-45 p0">
+                <div class="item">
+                    <p class="text ttu" ng-click="sortBy('device')">Device</p>
+                    <i ng-class="{irotate: irotate1}" class="sort-icon"></i>
+                </div>
+            </div>
+            <div class="col-45 p0">
+                <div class="item">
+                    <p class="text ttu" ng-click="sortBy('customer.clinic_name')">Clinic</p>
+                    <i ng-class="{irotate: irotate2}" class="sort-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="row table-content p0  pb7" ng-repeat="i in preventiveMaintenanceData | orderBy:propertyName:reverse" ng-class-even="'even'">
+            <div class="col-10 p0">
+                <div class="item">
+                    <div class="squaredTwo">
+                        <input type="checkbox" value="i.completed" id="{{$index}}" name="check" ng-checked="i.completed == '1';" ng-click="updateSelection($event, i.id)" />
+                        <label for="{{$index}}"></label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-45 p0" ng-click="deviceDetails(i.device.id)">
+                <div class="item">
+                    <p class="text ttu">{{i.device.model}}</p>
+                </div>
+            </div>
+            <div class="col-45 p0" ng-click="deviceDetails(i.device.id)">
+                <div class="item">
+                    <p class="text ttu">{{i.customer.clinic_name}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </ion-content>
+</ion-view>

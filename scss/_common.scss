@@ -1,0 +1,183 @@
+[nav-bar-transition="ios"] [nav-bar="active"] .bar,
+[nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+    background: $blue-1;
+    background-color: $blue-1;
+}
+
+.bar.bar-footer {
+    background-color: $bg;
+}
+
+.bar.bar-stable {
+    border-color: transparent;
+}
+
+.bar-stable .button.button-clear {
+    color: #fff;
+}
+
+.bar.bar-stable .title {
+    color: #fff;
+}
+
+.bar .title {
+    text-transform: uppercase;
+}
+
+.bg {
+    background-color: $bg;
+}
+
+.bg-blue {
+    background-color: $bg;
+    padding-bottom: 210px;
+}
+
+.sl_img--responsive {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+}
+
+.pb0 {
+    padding-bottom: 0;
+}
+
+.pt0 {
+    padding-top: 0;
+}
+
+.fwb {
+    font-weight: bold;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.pr0 {
+    padding-right: 0;
+}
+
+.w100p {
+    width: 100%;
+}
+
+.m-10 {
+    margin: -10px;
+}
+
+.mb-5 {
+    margin-bottom: -5px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb8 {
+    margin-bottom: 8px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.pt100 {
+    padding-top: 100px;
+}
+
+.pt150 {
+    padding-top: 150px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.fz18 {
+    font-size: 18px;
+}
+
+.fz16 {
+    font-size: 16px;
+}
+
+.fz14 {
+    font-size: 14px;
+}
+
+.fz12 {
+    font-size: 12px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pl5 {
+    padding-left: 5px;
+}
+
+@mixin animated($property, $duration) {
+    -webkit-transition: $property $duration linear;
+    -moz-transition: $property $duration linear;
+    -o-transition: $property $duration linear;
+    transition: $property $duration linear;
+}
+
+.sl_row {
+    padding: 0px;
+    .col {
+        padding: 0px;
+    }
+}
+
+.col-45 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 45%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 45%;
+    -ms-flex: 0 0 45%;
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.loading-container .loading {
+    background-color: #fff;
+    color: $blue-5;
+}
+
+.rd {
+    max-width: 100%;
+    max-height: 115px;
+}

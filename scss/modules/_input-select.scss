@@ -1,0 +1,137 @@
+:focus {
+    outline: none;
+}
+
+.title-device {
+    color: $blue-7;
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 0 7px;
+}
+
+.btn-choose {
+    background-color: $blue-1;
+    padding: 0 15px;
+    border: none;
+    color: white;
+    transition: all .3s ease;
+    font-size: 12px;
+    line-height: 24px;
+    min-height: 24px;
+    border-radius: 2px;
+}
+
+.btn-choose:active,
+.btn-choose:hover,
+.btn-choose:focus {
+    background-color: $blue-7;
+    color: #fff;
+}
+
+.btn-choose:visited {
+    background-color: $blue-1;
+    color: #fff;
+}
+
+.btn-choose.activated {
+    background-color: $blue-7;
+    color: #fff;
+}
+
+.select,
+.options {
+    margin: 4px 10px;
+}
+
+.select .item {
+    border: none;
+    background-color: transparent;
+    font-family: 'Raleway';
+    color: #fff;
+    padding: 0;
+    line-height: 40px;
+    padding-left: 15px;
+}
+
+.select {
+    background-color: $blue-7;
+    &:after {
+        //@include animated(all, 200ms);
+        transform: rotate(-90deg);
+    }
+    &.opened {
+        &:after {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.options .item {
+    border: none;
+    border-bottom: 3px solid #4CA4CA;
+    background-color: $blue-1;
+    font-family: 'Raleway';
+    color: #fff;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 32px;
+    @include animated(200ms, all);
+    height: 32px;
+    &.ng-hide {
+        height: 0px;
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.dn {
+    display: none;
+}
+
+.options .item:before {
+    /* use !important to prevent issues with browser extensions that change icons */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e91a";
+    left: 0;
+    color: #3B9BC5;
+    padding-right: 10px;
+}
+
+.select:after {
+    /* use !important to prevent issues with browser extensions that change icons */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e909";
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $blue-8;
+    // z-index: 2;
+    height: 100%;
+    width: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 19px;
+}

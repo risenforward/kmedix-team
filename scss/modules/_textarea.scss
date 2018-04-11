@@ -1,0 +1,39 @@
+.textarea-container {
+  position: relative;
+  padding: 5px;
+
+  textarea {
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #145977;
+    border-radius: 3px;
+    box-shadow: 0 0 5.5px 0.5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  textarea.isPlaceholder + .textarea-placeholder {
+    display: block;
+    top: 42%;
+    opacity: 1;
+  }
+
+  .textarea-placeholder {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    color: #B8B8B8;
+    
+    font-family: Raleway;
+    font-size: 0.8em;
+    font-family: Raleway;
+    font-size: .8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0;
+    //top: 500px;
+    @include animated(all, 0.2s);
+    padding: 0px 1em;
+  }
+}

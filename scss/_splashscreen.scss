@@ -1,0 +1,30 @@
+#custom-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    // background: -moz-radial-gradient(center, ellipse cover, #eeeeee 0%, #bfbfbf 100%);
+    // background: -webkit-radial-gradient(center, ellipse cover, #eeeeee 0%, #bfbfbf 100%);
+    // background: radial-gradient(ellipse at center, #eeeeee 0%, #bfbfbf 100%);
+}
+
+#custom-overlay.removesplashscreen {
+    opacity: 0;
+}
+
+#custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}

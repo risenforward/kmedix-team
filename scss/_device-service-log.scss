@@ -1,0 +1,113 @@
+button.button-icon.icon.ion-plus:before {
+    color: #fff;
+    font-size: 25px;
+}
+
+#device-service-log {
+    .card-title {
+        background-color: $blue-5;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        .right {
+            float: right;
+        }
+        .left {
+            float: left;
+            text-transform: uppercase;
+            color: #52acd3;
+        }
+    }
+    .items {
+        .item {
+            padding: 0px;
+            &.active {
+                background: #ececec;
+                .item_header {
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                    &.icon-right {
+                        &:before {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .item_content {
+                    max-height: 400px;
+                    background: #ececec;
+                }
+            }
+            .item_header {
+                line-height: 36px;
+                margin-bottom: 5px;
+                @include animated(all, 300ms);
+                &.icon-right {
+                    &:before {
+                        float: right;
+                        color: #145977;
+                        line-height: inherit;
+                        padding: 0px 10px;
+                        @include animated(all, 100ms);
+                        font-size: 12px;
+                    }
+                }
+                .date {
+                    color: #145977;
+                    font-family: Montserrat;
+                    padding-left: 10px;
+                    font-size: 12px;
+                }
+                .title {
+                    color: #52acd3;
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    padding-left: 15px;
+                }
+            }
+            .item_content {
+                background: #fff;
+                @include animated(max-height, 300ms);
+                max-height: 0px;
+                overflow: hidden;
+                .item_content--block {
+                    float: left;
+                    margin-left: 1.5%;
+                    margin-right: 1.5%;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    width: 47%;
+                    padding: 5px 0px 0px;
+                    background-color: #3482a4;
+                    border-radius: 3px;
+                    &:nth-of-type(2n+1) {
+                        margin-right: 0px;
+                    }
+                    .item_content--block_title {
+                        text-align: center;
+                        color: #fff;
+                        font-family: Montserrat;
+                        font-size: 11px;
+                        line-height: 14px;
+                        font-weight: 400;
+                        margin-bottom: 5px;
+                    }
+                    .left,
+                    .right {
+                        border-top: 1px solid #145977;
+                        float: left;
+                        width: 50%;
+                        li {
+                            color: #fff;
+                            font-family: Montserrat;
+                            padding-left: 5px;
+                            font-size: 10px;
+                            line-height: 18px;
+                        }
+                    }
+                    .right {
+                        border-left: 1px solid #145977;
+                    }
+                }
+            }
+        }
+    }
+}

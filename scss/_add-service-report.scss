@@ -1,0 +1,56 @@
+#add-service-report {
+    .card-title {
+        background-color: $blue-7;
+        color: #fff;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 0;
+        padding-left: 10px;
+        line-height: 30px;
+    }
+    .ttc {
+        text-transform: capitalize;
+    }
+    .item-text-wrap {
+        padding: 0;
+        margin: 0;
+        .name {
+            color: $blue-7;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+    }
+    .image {
+        width: 100%;
+        max-width: 108px;
+        position: relative;
+        top: -9px;
+        right: -5px;
+    }
+    .text {
+        font-size: 12px;
+    }
+    .text-9 {
+        color: $blue-1;
+    }
+    .textarea {
+        width: 100%;
+        padding: 5px;
+        height: 30px;
+        color: $blue-1;
+    }
+    .textarea.descr {
+        height: 50px;
+    }
+    .input-num {
+        color: $blue-1;
+        width: 100%;
+        height: 30px;
+        padding: 0 10px;
+    }
+    .button.button-block,
+    .button.button-full {
+        margin-top: 3px;
+    }
+}

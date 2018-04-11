@@ -1,0 +1,182 @@
+<ion-view view-title="Add service report" id="add-service-report" hide-back-button="false">
+    <ion-content class="bg padding">
+
+        <div class="row">
+            <div class="col-40 mb-5">
+                <img ng-src="{{reportCreateData.image_url}}" alt="" class="image">
+            </div>
+            <div class="col-60">
+                <div class="card mt5">
+                    <div class="item item-divider card-title">
+                        {{reportCreateData.model}}
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row">
+                            <div class="col">
+                                <p class="text text-9">Serial No: {{reportCreateData.serial_number}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col p0">
+                <div class="card mt0 mb8">
+                    <form ng-submit="addNew()">
+                        <div class="row header">
+                            <div class="col-10 card-title"></div>
+                            <div class="col-20 card-title">Qty</div>
+                           <!-- <div class="col-40 card-title">Part No.</div> //mye -->
+                            <div class="col-40 card-title">Description</div>
+                        </div>
+                        <div class="row" ng-repeat="personalDetail in personalDetails">
+                            <div class="col-10 mt5"><input type="checkbox" ng-model="personalDetail.selected"/></div>
+                            <div class="col-20"><input type="number" class="input-num" ng-model="personalDetail.qty" required/></div>
+                          <!--  <div class="col-40"><input type="text" class="input-num" ng-model="personalDetail.partno" required/></div> -->
+                            <div class="col-40"><input type="text" class="input-num" ng-model="personalDetail.desc" required/></div>
+                        </div>
+
+                        <div class="row p0">
+                            <div class="col-15"></div>
+                            <div class="col-30">
+                                <input type="submit" class="button button-block" value="Add New">
+                            </div>
+                            <div class="col-10"></div>
+                            <div class="col-30">
+                                <input ng-hide="!personalDetails.length" type="button" class="button button-block" ng-click="remove()" value="Remove">
+                            </div>
+                            <div class="col-15"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-60 pr5">
+
+                <div class="card mt0 mb8">
+                    <div class="item item-divider card-title ttc">
+                        Date of repair
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row">
+                            <div class="col p0 pl5">
+                                <p class="text text-9" ion-datetime-picker ng-model="dateOfRepair" ng-init="dateOfRepair = dateNow ">{{dateOfRepair| date: "yyyy-MM-dd H:mm:ss"}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-40">
+                <div class="card mt0 mb8">
+                    <div class="item item-divider card-title ttc">
+                        Labor Hours
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row p0">
+                            <div class="col p0">
+                                <input type="number" class="input-num" ng-model="addServiceReportData.laborHours">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-60 pr5">
+
+                <div class="card mt0 mb8">
+                    <div class="item item-divider card-title ttc">
+                        Type of Job
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row">
+                            <div class="col p0 pl5">
+                                <select ng-model="addServiceReportData.jobType" ng-options="x for x in jobType">{{jobType[0]}}</select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-40">
+                <div class="card mt0 mb8">
+                    <div class="item item-divider card-title ttc">
+                        Payment
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row p0">
+                            <div class="col p15">
+                                <select ng-model="addServiceReportData.payment" ng-options="x for x in payment"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col p0">
+                <div class="card mt0 mb8">
+                    <div class="item item-divider card-title ttc">
+                        Complain
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row p0">
+                            <div class="col p0  pl5">
+                                <textarea name="textarea" class="textarea text text-9" ng-model="addServiceReportData.complain"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col p0">
+
+                <div class="card mt0 mb8">
+                    <div class="item item-divider card-title ttc">
+                        Action
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row p0">
+                            <div class="col p0">
+                                <textarea name="textarea" class="textarea descr" ng-model="addServiceReportData.description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-if="reportCreateData.counters !== 0">
+            <div class="col p0">
+
+                <div class="card mt0 mb8">
+                    <div class="item item-divider card-title ttc">
+                        Counters
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div class="row" ng-repeat="counter in reportCreateData.counters">
+                            <div class="col-33">
+                                <p class="text text-9 name">{{counter}}</p>
+                            </div>
+                            <div class="col-67">
+                                <textarea name="textarea" class="textarea text text-9" placeholder="Enter counter" ng-model="addServiceReportData.counters[$index]"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="button button-block btn-lg" ng-click="saveLog(addServiceReportData, dateOfRepair.toLocaleString(), reportCreateData.id)">save</button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,52 @@
+	.text-2{
+		font-size: 11px;
+		color: $blue-7;
+		text-align: center;
+	}
+	.text-2.title{
+		color: $blue-1;
+	}
+
+	.fz-2{
+		font-size: 11px;
+	}
+	
+	.t-btn{
+		text-transform: uppercase;
+		margin: 0;
+
+		width: 100%;
+		background-color: $blue-7;
+		color: #fff;
+		border-radius: 0;
+    font-family: 'Raleway';
+	border: none;
+	color: white;
+	transition: all .3s ease;
+	font-size: 10px;
+	line-height: 24px;
+	min-height: 26px;
+	border-radius: 1px;
+
+	}
+
+	$t-btn-w: 5px;
+	.t-btn-l{
+		margin-right: $t-btn-w;
+	}
+	.t-btn-r{
+		margin-left: $t-btn-w;
+	}
+
+	.t-btn-svg{
+		font-size: 10px;
+		line-height: 22px;
+		padding-left: 3px;
+	}
+
+	.t-btn.svg-gallery_icon2:before{
+		@extend .t-btn-svg;
+	}
+	.t-btn.svg-camera_icon2:before{
+		@extend .t-btn-svg;
+	}

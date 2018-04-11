@@ -1,0 +1,57 @@
+<ion-view view-title="devices" id="devices" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="bg padding">
+        <div class="list list-inset">
+            <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search Customer" ng-model="search.clinic">
+            </label>
+            <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search Type" ng-model="search.model">
+            </label>
+
+            <p class="text1">Found device</p>
+            <!--<p>{{searchType}}</p>-->
+            <div class="row th p0 pb7">
+                <div class="col p0">
+                    <div class="item">
+                        <p class="text">Serial No</p>
+                    </div>
+                </div>
+                <div class="col p0">
+                    <div class="item">
+                        <p class="text ttu">Type</p>
+                    </div>
+                </div>
+                <div class="col p0">
+                    <div class="item">
+                        <p class="text ttu">Clinic</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row table p0  pb7" ng-repeat="device in allDevices | filter:{clinic_name: search.clinic, model: search.model}" ng-class-even="'even'" ng-click="deviceDetails(device.id)">
+                <div class="col p0 w33">
+                    <div class="item">
+                        <p class="text">{{device.serial_number}}</p>
+                    </div>
+                </div>
+                <div class="col p0 w33">
+                    <div class="item">
+                        <p class="text ttu">{{device.model}}</p>
+                    </div>
+                </div>
+                <div class="col p0 w33">
+                    <div class="item">
+                        <p class="text ttu">{{device.clinic_name}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

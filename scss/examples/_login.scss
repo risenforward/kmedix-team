@@ -1,0 +1,21 @@
+.row--logo {
+	margin: 70px 0px;
+
+	.kmedix-logo-img {
+		width: 100%;
+		text-align: center;
+		display: inline-block;
+		font-size: 57px;
+	}
+}
+
+a {
+	&.lost-password {
+		text-align: left;
+		color: $color_main;
+		font-family: Raleway;
+		font-size: 14px;
+		font-weight: 300;
+		text-decoration: none;
+	}
+}

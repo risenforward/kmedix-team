@@ -1,0 +1,33 @@
+<ion-view view-title="search" ng-controller="salesRequestCtrl">
+  <ion-content>
+    <div class="row">
+      <div class="col col-offset-10 col-80">
+        <button class="button button-block sl_btn--md">
+          sl_btn--md
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <button class="button button-block sl_btn--lg">sl_btn--lg</button>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col col-offset-10 col-80">
+        <input type="text" placeholder="Username" class="sl_input sl_input--username">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-offset-10 col-80">
+        <input type="text" placeholder="Password" class="sl_input sl_input--password">
+      </div>
+    </div>
+    <hr>
+    <div class="textarea-container">
+        <textarea name="name" rows="8" cols="40" ng-change="textareaPlaceholder()" ng-model="textareaVal" ng-class="{isPlaceholder:isPlaceholder}"></textarea>
+        <span class="textarea-placeholder">
+          Enter your request description
+        </span>
+    </div>
+  </ion-content>
+</ion-view>

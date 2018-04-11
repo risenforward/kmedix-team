@@ -1,0 +1,63 @@
+<ion-view view-title="Customer details" id="customer-details" ng-init="initMap(lat, lng)" hide-back-button="false">
+    <div class="bar bar-subheader customer-details-blocked" ng-if="customerDetailsBlock">
+        <h2 class="title">Blocked</h2>
+    </div>
+    <ion-content class="bg padding">
+        <div ng-class="{'correct-margin': !customerDetailsBlock, 'row':true, 'logo-clinic': true}">
+            <div class="col col-40">
+
+                <img ng-src="{{customerDetailsData.image_url}}" alt="">
+            </div>
+            <div class="col col-60">
+                <p>{{customerDetailsData.clinic_name}}</p>
+            </div>
+        </div>
+        <ul class="table">
+            <li>
+                <span class="left">
+					Official Number
+				</span>
+                <span class="right">
+                    <a href="tel:{{customerDetailsData.phone_number}}" class="phone-call">{{customerDetailsData.phone_number}}</a>
+				</span>
+            </li>
+            <li ng-repeat="person in customerDetailsData.contact_persons">
+                <span class="left">
+					{{person.name}}
+				</span>
+                <span class="right">
+                    <a href="tel:{{person.phone_number}}" class="phone-call">{{person.phone_number}}</a>
+				</span>
+            </li>
+            <li>
+                <p class="Atitle">{{customerDetailsData.clinic_name}}</p>
+                <p class="Atext">{{customerDetailsData.address}}</p>
+            </li>
+        </ul>
+        <div class="row customer-details-map-wrap" ng-show="showCustomerMap">
+            <div id="map" class="customer-details-map" data-tap-disabled="true"></div>
+        </div>
+
+        <div class="row p0">
+            <div class="col-40 ">
+                <button class="button button-block icon-right svg-map-location btn-3" ng-click="setLocation()">SET GPS LOCATION</button>
+            </div>
+           <div class="col-40 p0  col-offset-20 pb0">
+                <button class="button button-block icon-right svg-start-nav btn-3" ng-disabled="!showCustomerStartNav" ng-click="navigate()">start nav</button>
+            </div>
+         </div>
+
+
+        <!--<div class="row sl_row">
+            <div class="col col-40">
+                <button class="button button-block sl_btn--lg sl_btn--nav">START NAV <i class="svg-start-nav"></i></button>
+            </div>
+            <div class="col col-50 col-offset-10">
+                <button class="button button-block sl_btn--lg sl_btn--nav">SET GPS LOCATION <i class="svg-map-location"></i></button>
+            </div>
+        </div>-->
+        <div class="row sl_row">
+            <button class="button button-block btn-lg" ng-if="$storage.showitem" ng-click="clinicInstallDevices(customerDetailsData.id)">Show installed device</button>
+        </div>
+    </ion-content>
+</ion-view>

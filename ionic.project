@@ -1,0 +1,12 @@
+{
+  "name": "kmedixteam",
+  "app_id": "296c94eb",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

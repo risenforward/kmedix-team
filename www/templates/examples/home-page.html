@@ -1,0 +1,30 @@
+<ion-view view-title="home" hide-back-button="true" cache-view="false">
+<ion-content class="bg">
+<div class="row logo-clinic">
+  <div class="col col-40">
+    <img src="./img/heart.png" alt="">
+  </div>
+  <div class="col col-60">
+    <p>Dar-Alshifa<br>Clinic</p>
+  </div>
+</div>
+<ion-list>
+<a ui-sref="app.tech-support-request" class="item button button-block icon-right svg-technical-support home-menu-item">technical support</a>
+<a ui-sref="app.clinical-support-request" class="item button button-block icon-right svg-medical-support home-menu-item__2">medical support</a>
+<a ui-sref="app.sales-request" class="item button button-block icon-right svg-sales-request home-menu-item__3">sales request</a>
+<a ui-sref="app.rating" class="item button button-block icon-right svg-complaint-to-management home-menu-item__4">complain to management</a>
+</ion-list>
+<div class="row">
+  <div class="col">
+    <a ui-sref="app.change-password" class="button button-block two-btns icon-right svg-still_need_support_icon">change password</a>
+  </div>
+  <div class="col">
+    <a ui-sref="app.logout" class="button button-block two-btns icon-right svg-close_request_icon">sign out</a>
+  </div>
+</div>
+
+</ion-content>
+<div class="bar bar-footer">
+  <i class="svg-kmedix-logo kmedix-logo-img"></i>
+</div>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view view-title="Kmedix group" id="kmedix-home" hide-back-button="true" ng-init="getRequestList()">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="bg">
+
+        <ion-tabs class="tabs-positive tabs-icon-top">
+
+            <ion-tab title="Assigned" on-select="getRequestList()">
+                <ion-content>
+                    <span class="notes">Assigned clinic to you</span>
+
+                    <div class="card">
+                        <div ng-repeat="item in assigned" class="item item-clinic-wrap" ng-click="getRequestDetails(item.id)">
+                            {{item.customer.clinic_name}}
+                            <img ng-src="{{item.customer.image_url}}" alt="" class="clinic-logo-img">
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-tab>
+
+            <ion-tab title="Unassigned" on-select="getRequestList()">
+                <ion-content>
+                    <span class="notes">Unassigned clinic</span>
+                    <div class="card">
+                        <div ng-repeat="item in unassigned" class="item item-clinic-wrap" ng-click="getRequestDetails(item.id)">
+                            {{item.customer.clinic_name}}
+                            <img ng-src="{{item.customer.image_url}}" alt="" class="clinic-logo-img">
+                        </div>
+                    </div>
+
+                </ion-content>
+            </ion-tab>
+        </ion-tabs>
+
+
+
+
+        <div class="bar bar-footer">
+
+            <i class="svg-kmedix-logo kmedix-logo-img"></i>
+        </div>
+
+    </ion-content>
+</ion-view>

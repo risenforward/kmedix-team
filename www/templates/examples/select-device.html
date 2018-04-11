@@ -1,0 +1,36 @@
+<ion-view view-title="select device">
+  <ion-content class="bg padding">
+
+    <div class="row logo-clinic">
+      <div class="col col-40">
+          <img src="./img/heart.png" alt="">
+      </div>
+      <div class="col col-60">
+        <p>Dar-Alshifa<br>Clinic</p>
+      </div>
+    </div>
+
+<div class="list list-inset select">
+    <div class="item" ng-bind="currSelect" ng-click="toggleCustom()"></div>
+</div>
+
+<div class="list list-inset options" id="derp">
+<!-- ng-class="{'dn':currSelect=='All types', item: true}"  -->
+    <div class="item" ng-click="changeType(''); toggleCustom()" ng-hide="custom">All types</div>
+    <div class="item arrow-option"  ng-repeat="type in types" ng-bind="type.type" ng-click="changeType(type.type); toggleCustom()" ng-hide="custom"></div>
+</div>
+
+  <div class="row" ng-repeat="item in devices | filter:currType">
+    <div class="col col-75">
+      <p class="title-device" ng-bind="item.name"></p>
+      <button class="button btn-choose">Choose</button>
+    </div>
+    <div class="col">
+      <img ng-src="{{item.image}}" alt="" class="img-device"/>
+    </div>
+  </div>
+
+    <button class="button button-block btn-lg">create request</button>
+
+  </ion-content>
+</ion-view>

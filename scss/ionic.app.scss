@@ -1,0 +1,52 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "www/lib/ionic/scss/ionic";
+@import "variables/_fonts";
+@import "variables/_colors";
+@import "_common";
+@import "_grid";
+@import "_menu";
+@import "modules/_buttons";
+@import "modules/_header";
+@import "modules/_home-menu-item";
+@import "modules/_input";
+@import "modules/_logo-clinic";
+@import "modules/_select-device-item";
+@import "modules/_text-and-two-btns";
+@import "modules/_textarea";
+@import "modules/_two-btns";
+@import "modules/_input-select";
+@import "_kmedix-home";
+@import "_request-details";
+@import "_device-search";
+@import "_devices";
+@import "_device-details";
+@import "_customer-details";
+@import "_add-service-report";
+@import "_device-service-log";
+@import "_preventive-maintenance";
+@import "_settings";
+@import "_login";
+@import "_change-password";
+@import "_datetime";
+@import "_areyousure-popup";
+@import "_nav-modal";
+@import "_splashscreen";
+@import "_modal";
